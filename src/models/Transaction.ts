@@ -14,6 +14,7 @@ class Transaction {
   @Column()
   type: 'income' | 'outcome';
 
+  @Column()
   value: number;
 
   @ManyToOne(()=>Category)

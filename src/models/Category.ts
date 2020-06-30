@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from "typeorm";
 
 
-@Entity("categorys")//wo das in db ist?
+@Entity("categories")//wo das in db ist?
 class Category {
   @PrimaryGeneratedColumn("uuid")
   id: string;
