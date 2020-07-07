@@ -16,7 +16,7 @@ class TransactionsRepository extends Repository<Transaction> {
    incommingValues.forEach(item=>income+=item.value)
    const outcommingValues= await this.find({where:{type:"outcome"}})
    let outcome=0
-  outcommingValues.forEach(item=>income+=item.value)
+  outcommingValues.forEach(item=>outcome+=item.value)
   return{
     income,
     outcome,

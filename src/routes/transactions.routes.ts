@@ -5,11 +5,6 @@ import CreateTransactionService from '../services/CreateTransactionService';
 import DeleteTransactionService from '../services/DeleteTransactionService';
 import ImportTransactionsService from '../services/ImportTransactionsService';
 
-// import TransactionsRepository from '../repositories/TransactionsRepository';
-// import CreateTransactionService from '../services/CreateTransactionService';
-// import DeleteTransactionService from '../services/DeleteTransactionService';
-// import ImportTransactionsService from '../services/ImportTransactionsService';
-
 const transactionsRouter = Router();
 
 transactionsRouter.get('/', async (request, response) => {
@@ -35,6 +30,7 @@ transactionsRouter.delete('/:id', async (request, response) => {
 console.log(id)
   const deleteTransaction=new DeleteTransactionService()
   deleteTransaction.execute(id)
+  return response.json({"message":"deleted"})
 });
 
 transactionsRouter.post('/import', async (request, response) => {
