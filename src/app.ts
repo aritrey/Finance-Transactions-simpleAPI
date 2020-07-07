@@ -1,3 +1,4 @@
+// eslint-disable-next-line prettier/prettier
 import express from 'express';
 import routes from './routes';
 
